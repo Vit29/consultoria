@@ -20,28 +20,35 @@ const sizeHeight = window.innerHeight
 window.addEventListener('scroll', (e) => {
     // console.log(Math.round(scrollY / sizeHeight));
     const section = Math.round(scrollY / sizeHeight)
-    console.log(section);
     
-    section == 1 
-    ? secQuienesSomos.classList.add('show')
-    : secQuienesSomos.classList.remove('show')
-    section == 2 
-    ? tienesUnProblema.classList.add('show')
-    : tienesUnProblema.classList.remove('show')
-    section == 3 
-    ? propuestaSolutiva.classList.add('show')
-    : propuestaSolutiva.classList.remove('show')
-    section == 4 
-    ? comoQuienes.classList.add('show')
-    : comoQuienes.classList.remove('show')
-    section == 5 
-    ? comentario.classList.add('show')
-    : comentario.classList.remove('show')
-    section == 6 
-    ? motivacion.classList.add('show')
-    : motivacion.classList.remove('show')
-    section == 7 
-    ? contacto.classList.add('show')
-    : contacto.classList.remove('show')
+    // section == 1 
+    // ? secQuienesSomos.classList.add('show')
+    // : secQuienesSomos.classList.remove('show')
+    // section == 2 
+    // ? tienesUnProblema.classList.add('show')
+    // : tienesUnProblema.classList.remove('show')
+    // section == 3 
+    // ? propuestaSolutiva.classList.add('show')
+    // : propuestaSolutiva.classList.remove('show')
+    // section == 4 
+    // ? comoQuienes.classList.add('show')
+    // : comoQuienes.classList.remove('show')
+    // section == 5 
+    // ? comentario.classList.add('show')
+    // : comentario.classList.remove('show')
+    // section == 6 
+    // ? motivacion.classList.add('show')
+    // : motivacion.classList.remove('show')
+    // section == 7 
+    // ? contacto.classList.add('show')
+    // : contacto.classList.remove('show')
+
+    if (section == 1 ) secQuienesSomos.classList.add('show')
+    if (section == 2 ) tienesUnProblema.classList.add('show')
+    if (section == 3 ) propuestaSolutiva.classList.add('show')
+    if (section == 4 ) comoQuienes.classList.add('show')
+    if (section == 5 ) comentario.classList.add('show')
+    if (section == 6 ) motivacion.classList.add('show')
+    if (section == 7 ) contacto.classList.add('show')
     
 })
