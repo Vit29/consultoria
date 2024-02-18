@@ -6,40 +6,47 @@ const comoQuienes = document.querySelector('.como-y-a-quienes')
 const comentario = document.querySelector('.comentario')
 const motivacion = document.querySelector('.motivacion')
 const contacto = document.querySelector('.contacto')
+const fondoNuevos = document.querySelectorAll('.fondo')
 
-const fondoNuevo = document.querySelector('.fondo')
 
+const sizeHeight = window.innerHeight
+const sizeWidth = window.innerWidth
+
+console.log(sizeWidth);
 let cuadro
-for (let i = 0; i < 20; i++) {
-    cuadro = document.createElement('div')
+fondoNuevos.forEach(fondoNuevo => {
+    const count = 55
+    for (let i = 0; i < count; i++) {
+        cuadro = document.createElement('div')
+        
+        const alto = Math.floor(Math.random() * (300 - 50 + 1))  + 50 
+        const ancho = Math.floor(Math.random() * (300 - 50 + 1)) + 50
+        const x = Math.random() * sizeWidth 
+        const y = Math.random() * -sizeHeight * 7
     
-    const alto = Math.floor(Math.random() * (300 - 50 + 1))  + 50 
-    const ancho = Math.floor(Math.random() * (300 - 50 + 1)) + 50
-    const x = Math.random() * 800
-    const y = Math.random() * -1600
-
-    cuadro.style.background = '#2c2c79'
-    cuadro.style.opacity = '0.5'
-
-    cuadro.style.position = 'absolute'
-    cuadro.style.left = x +'px'
-    cuadro.style.top = -y +'px'
-
-    cuadro.style.width = ancho +'px'
-    cuadro.style.height = ancho +'px'
+        cuadro.style.background = '#2c2c79'
+        // cuadro .style.border = 'solid 2px'
+        // cuadro.style.borderRadius = '50%'
+        cuadro.style.opacity = '0.5'
     
-    fondoNuevo.appendChild(cuadro)
-}
+        cuadro.style.position = 'absolute'
+        cuadro.style.left = x +'px'
+        cuadro.style.top = -y +'px'
+        cuadro.style.transform = 'rotate(45deg)'
 
-console.log(fondoNuevo);
+        cuadro.style.width = ancho +'px'
+        cuadro.style.height = ancho +'px'
+        
+        fondoNuevo.appendChild(cuadro)
+    }
+});
+
 
 
 header.addEventListener('click', () => {
     header.classList.toggle('active')
 })
 
-
-const sizeHeight = window.innerHeight
 
 window.addEventListener('scroll', () => {
     const section = Math.round(scrollY / sizeHeight)
