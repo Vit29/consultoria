@@ -24,8 +24,8 @@ fondoNuevos.forEach(fondoNuevo => {
         const x = Math.random() * sizeWidth 
         const y = Math.random() * -sizeHeight * 7
     
-        cuadro.style.background = '#2c2c79'
-        // cuadro .style.border = 'solid 2px'
+        // cuadro.style.background = '#2c2c79'
+        cuadro .style.border = 'solid 2px'
         // cuadro.style.borderRadius = '50%'
         cuadro.style.opacity = '0.5'
     
