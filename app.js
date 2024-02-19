@@ -8,27 +8,24 @@ const motivacion = document.querySelector('.motivacion')
 const contacto = document.querySelector('.contacto')
 const fondoNuevos = document.querySelectorAll('.fondo')
 
-
 const sizeHeight = window.innerHeight
 const sizeWidth = window.innerWidth
 
-console.log(sizeWidth);
-let cuadro
 fondoNuevos.forEach(fondoNuevo => {
     const count = 55
     for (let i = 0; i < count; i++) {
-        cuadro = document.createElement('div')
+        const cuadro = document.createElement('div')
         
         const alto = Math.floor(Math.random() * (300 - 50 + 1))  + 50 
         const ancho = Math.floor(Math.random() * (300 - 50 + 1)) + 50
         const x = Math.random() * sizeWidth 
         const y = Math.random() * -sizeHeight * 7
     
-        // cuadro.style.background = '#2c2c79'
-        cuadro .style.border = 'solid 2px Gold'
-        // cuadro.style.borderRadius = '50%'
-        cuadro.style.opacity = '0.1'
-        // cuadro.style.boxShadow = '0px 0px 25px 5px gold'
+        cuadro.style.border = 'solid 1px Gold'
+        cuadro.style.opacity = '0.2'
+        // cuadro.style.borderRadius = '50%' 
+        // cuadro.style.boxShadow = '0 0 20px 10px'
+        // cuadro.style.background = '#341a70'
     
         cuadro.style.position = 'absolute'
         cuadro.style.left = x +'px'
@@ -42,15 +39,13 @@ fondoNuevos.forEach(fondoNuevo => {
     }
 });
 
-
-
 header.addEventListener('click', () => {
     header.classList.toggle('active')
 })
 
-
 window.addEventListener('scroll', () => {
     const section = Math.round(scrollY / sizeHeight)
+    console.log(section);
     
     if (section == 1 ) secQuienesSomos.classList.add('show')
     if (section == 2 ) tienesUnProblema.classList.add('show')

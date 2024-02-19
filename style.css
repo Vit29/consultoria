@@ -21,9 +21,6 @@ body {
   background-color: #0c0e1f;
 }
 
-/* main {
-} */
-
 header {
   position: absolute;
   width: 100%;
@@ -110,8 +107,6 @@ section h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
-  /* position: relative; */
 }
 
 section p {
@@ -149,7 +144,7 @@ section p {
   flex-wrap: wrap;
   transform: translateX(-100%);
   opacity: 0;
-  transition: 0.8s ease;
+  transition: 2s ease;
 }
 
 .show {
@@ -176,8 +171,8 @@ section p {
 
 .carrucel {
   display: flex;
-  width: calc(200px * 8);
-  animation: carrucel 30s linear infinite;
+  width: calc(350px * 8);
+  animation: carrucel 40s linear infinite;
 }
 
 .propuesta-solutiva::before {
@@ -201,28 +196,40 @@ section p {
   box-shadow: 0px 0px 50px 80px;
 }
 
-.carrucel p {
-  width: 200px;
-  height: 200px;
-  padding: 10px;
-  margin-left: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translate(400px);
+.carrucel div {
+    width: 350px;
+  padding-top: 5rem;
+  transform: translate(700px);
   position: relative;
 }
 
-.carrucel p::after {
+/* .carrucel div::after {
   content: "";
   position: absolute;
-  left: -20px;
+  left: -10px;
+  top: 100px;
   width: 0px;
   z-index: -10;
   border-right: solid 10px transparent;
   border-bottom: solid 10px transparent;
   border-top: solid 10px transparent;
   border-left: solid 10px #ffffff;
+} */
+
+/* .container-number {
+  
+} */
+
+.number {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    padding-top: 5px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border-radius: 50%;
+    border: solid 1px ;
+    color: white;
 }
 
 @keyframes carrucel {
@@ -230,7 +237,7 @@ section p {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(calc(-200px * 4));
+    transform: translateX(calc(-350px * 4));
   }
 }
 
@@ -255,7 +262,7 @@ section p {
   padding: 0.5rem 0;
 }
 
-.part-one, .part-two {
+.part-one {
     position: relative;  
     overflow: hidden;
 }
@@ -270,9 +277,9 @@ section p {
     color: whitesmoke;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 800px) {
   .propuesta-solutiva {
-    width: 65%;
+    width: 100%;
   }
 
   header {
