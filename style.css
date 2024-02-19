@@ -37,10 +37,20 @@ header.active {
 }
 
 header nav {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+header nav i {
+ position: absolute;
+ color: white;
+ font-size: 2rem; 
+ right: 0;
+ top: 0;
+ padding: 0.2rem;
 }
 
 header nav ul {
@@ -55,31 +65,29 @@ header nav ul {
 }
 
 header nav ul li {
-    width: 60%;
+  width: 60%;
 }
 
 header nav ul li a {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    text-transform: uppercase;
-    border: 1px solid whitesmoke;
-    width: 100%;
-    transition: 0.5s ease;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  text-transform: uppercase;
+  border: 1px solid whitesmoke;
+  width: 100%;
+  transition: 0.5s ease;
 }
-
 
 header nav ul li a:hover {
-    background-color: goldenrod;
+  background-color: goldenrod;
 }
 
 header nav ul li a {
-    text-decoration: none;
-    color: whitesmoke;
+  text-decoration: none;
+  color: whitesmoke;
 }
-header nav ul li:nth-child(7){
-    background-color: goldenrod;
-    
+header nav ul li:nth-child(7) {
+  background-color: goldenrod;
 }
 
 section {
@@ -97,6 +105,13 @@ section h1 {
   font-size: 1.6rem;
 }
 
+section p {
+  max-width: 550px;
+  font-size: 1.3rem;
+  padding: 1rem;
+  color: white;
+}
+
 #quines-somos,
 #tienes-un-problema,
 #como-y-a-quienes,
@@ -109,12 +124,6 @@ section h1 {
   align-items: center;
 }
 
-section p {
-  max-width: 550px;
-  font-size: 1.3rem;
-  padding: 1rem;
-  color: white;
-}
 
 #propuesta-solutiva {
   position: relative;
@@ -127,7 +136,15 @@ section p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* display: flex; */
 }
+/* 
+.home img {
+    width: 50%;
+    border-radius: 50% ;
+    filter: invert();
+    mix-blend-mode: multiply;
+} */
 
 .quines-somos,
 .tienes-un-problema,
@@ -175,29 +192,28 @@ section p {
   animation: carrucel 40s linear infinite;
 }
 
-.propuesta-solutiva::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  color: #0c0e1f;
-  width: 0px;
-  height: 200px;
-  box-shadow: 0px 0px 50px 80px;
-}
-
+.propuesta-solutiva::before,
 .propuesta-solutiva::after {
   content: "";
   position: absolute;
-  right: 0;
   color: #0c0e1f;
-  width: 0;
+  bottom: 0;
   height: 200px;
-  box-shadow: 0px 0px 50px 80px;
+  width: 0;
+  box-shadow: 0px 0px 15px 20px;
+  z-index: 1;
+}
+
+.propuesta-solutiva::before {
+  left: 0;
+}
+
+.propuesta-solutiva::after {
+  right: 0;
 }
 
 .carrucel div {
-    width: 350px;
+  width: 350px;
   padding-top: 5rem;
   transform: translate(700px);
   position: relative;
@@ -216,20 +232,16 @@ section p {
   border-left: solid 10px #ffffff;
 } */
 
-/* .container-number {
-  
-} */
-
 .number {
-    width: 50px;
-    height: 50px;
-    font-size: 2rem;
-    padding-top: 5px;
-    margin-bottom: 2rem;
-    display: inline-block;
-    border-radius: 50%;
-    border: solid 1px ;
-    color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  padding-top: 5px;
+  margin-bottom: 2rem;
+  display: inline-block;
+  border-radius: 50%;
+  border: solid 1px;
+  color: white;
 }
 
 @keyframes carrucel {
@@ -257,24 +269,38 @@ section p {
   padding: 0;
 }
 
-.contacto :nth-child(2) {
+.contacto p:nth-child(2) {
   color: whitesmoke;
   padding: 0.5rem 0;
 }
 
+.contacto p i {
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.redes {
+    margin-top: 20px;
+}
+
+.redes i {
+    padding: 0 8px;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
 .part-one {
-    position: relative;  
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .fondo {
-    position: relative;
-    position: absolute;
-    z-index: -1;
-    width: 100px;
-    height: 100px;
-    /* border: solid white 2px; */
-    color: whitesmoke;
+  position: relative;
+  position: absolute;
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  color: whitesmoke;
 }
 
 @media screen and (min-width: 800px) {
@@ -288,6 +314,10 @@ section p {
     clip-path: initial;
   }
 
+  header nav i {
+    display: none;
+  }
+
   header nav ul {
     flex-direction: row;
     justify-content: end;
@@ -297,10 +327,14 @@ section p {
     font-size: 0.9rem;
     width: auto;
     border-radius: 0;
-    
   }
 
-  header nav ul li a{
+  header nav ul li a {
     border: none;
+  }
+
+  .propuesta-solutiva::before,
+  .propuesta-solutiva::after {
+    box-shadow: 0px 0px 50px 80px;
   }
 }

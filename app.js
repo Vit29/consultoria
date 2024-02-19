@@ -23,9 +23,6 @@ fondoNuevos.forEach(fondoNuevo => {
     
         cuadro.style.border = 'solid 1px Gold'
         cuadro.style.opacity = '0.2'
-        // cuadro.style.borderRadius = '50%' 
-        // cuadro.style.boxShadow = '0 0 20px 10px'
-        // cuadro.style.background = '#341a70'
     
         cuadro.style.position = 'absolute'
         cuadro.style.left = x +'px'
