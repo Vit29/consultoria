@@ -86,7 +86,7 @@ header nav ul li a {
   text-decoration: none;
   color: whitesmoke;
 }
-header nav ul li:nth-child(7) {
+header nav ul li:nth-child(8) {
   background-color: goldenrod;
 }
 
@@ -136,15 +136,14 @@ section p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* display: flex; */
 }
-/* 
+
 .home img {
     width: 50%;
     border-radius: 50% ;
     filter: invert();
     mix-blend-mode: multiply;
-} */
+}
 
 .quines-somos,
 .tienes-un-problema,
@@ -287,6 +286,19 @@ section p {
     padding: 0 8px;
     color: whitesmoke;
     font-size: 1.5rem;
+}
+
+.bi-facebook:hover {
+    color: rgb(92, 74, 255);
+}
+.bi-whatsapp:hover {
+    color: rgb(118, 252, 106);
+}
+.bi-envelope-at-fill:hover {
+    color: #fff348;
+}
+.bi-geo-alt-fill:hover {
+    color: rgb(252, 64, 64);
 }
 
 .part-one {
