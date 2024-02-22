@@ -159,10 +159,11 @@ section p {
 
 .parrafo-home div img {
     width: 80%;
-    /* mix-blend-mode: color-dodge; */
-    /* border-radius: 50%; */
-    filter: invert() ;
-    
+    mix-blend-mode: screen;
+    border-radius: 50%;
+    padding-top: 20px;
+    /* filter: opacity(80%); */
+    filter: drop-shadow(0 0 10px #f5f3f3);    
 }
 
 .parrafo-home div h1 {
@@ -370,8 +371,8 @@ section div .img {
   
   header nav img {
     width: 45px;
-    /* mix-blend-mode: multiply; */
-    border-radius: 50%;
+    mix-blend-mode: multiply;
+    filter: invert() ;
     display: initial;
     padding: 5px;
 }
