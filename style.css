@@ -151,17 +151,18 @@ section p {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: red;
     background: url(fotos-loba/2.jpg) center/cover;
     background-repeat: no-repeat;
-    filter: blur(5px) brightness(70%);
+    filter: blur(5px) brightness(50%) ;
     z-index: -1;
 }
 
 .parrafo-home div img {
     width: 80%;
-    mix-blend-mode: multiply;
-    border-radius: 50%;
+    /* mix-blend-mode: color-dodge; */
+    /* border-radius: 50%; */
+    filter: invert() ;
+    
 }
 
 .parrafo-home div h1 {
