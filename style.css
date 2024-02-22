@@ -33,6 +33,7 @@ header {
   clip-path: circle(50px at 100% 0%);
   transition: 0.5s ease;
   cursor: pointer;
+  z-index: 1;
 }
 
 header.active {
@@ -45,6 +46,10 @@ header nav {
   flex-direction: column;
   justify-content: center;
   position: relative;
+}
+
+header nav img {
+    display: none;
 }
 
 header nav i {
@@ -74,10 +79,12 @@ header nav ul li {
 header nav ul li a {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 15px 10px;
   text-transform: uppercase;
-  border: 1px solid whitesmoke;
+  border: 1px solid goldenrod;
   width: 100%;
+  text-decoration: none;
+  color: whitesmoke;
   transition: 0.5s ease;
 }
 
@@ -85,10 +92,6 @@ header nav ul li a:hover {
   background-color: goldenrod;
 }
 
-header nav ul li a {
-  text-decoration: none;
-  color: whitesmoke;
-}
 header nav ul li:nth-child(8) {
   background-color: goldenrod;
 }
@@ -136,7 +139,6 @@ section p {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
   font-weight: bolder;
 }
@@ -154,10 +156,10 @@ section p {
 }
 
 .parrafo-home div img {
-    width: 50%;
+    width: 80%;
     mix-blend-mode: multiply;
     /* filter: drop-shadow( 0px 0px 10px); */
-    border: solid 2px ;
+    /* border: solid 2px ; */
     border-radius: 50%;
 }
 
@@ -350,20 +352,23 @@ section div .img {
 }
 
 @media screen and (min-width: 640px) {
-  /* .quines-somos,
-  .tienes-un-problema,
-  .como-y-a-quienes,
-  .motivacion,
-  .contacto,
-  .propuesta-solutiva {
-    
-  } */
-
+ 
   header {
     position: absolute;
     height: auto;
     clip-path: initial;
   }
+
+  header nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  header nav img {
+    width: 45px;
+    mix-blend-mode: multiply;
+    display: initial;
+}
 
   header nav i {
     display: none;
@@ -397,11 +402,19 @@ section div .img {
     font-size: 1.6rem;
   }
 
+  .home {
+    align-items: center;
+  }
+
   .parrafo {
     order: 2;
   }
 
   .como-y-a-quienes-img {
     order: 1;
+  }
+
+  .parrafo-home div img {
+    width: 60%;
   }
 }
