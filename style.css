@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap');
 
 * {
   margin: 0;
@@ -102,7 +102,7 @@ section {
   text-align: center;
 }
 
-section h1 {
+section h2 {
   color: gold;
   padding: 10px;
   text-transform: uppercase;
@@ -139,8 +139,11 @@ section p {
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
   font-weight: bolder;
+  font-family: 'Montserrat' , sans-serif;
+  font-weight: 500;
 }
 
 .home::before {
@@ -158,16 +161,16 @@ section p {
 .parrafo-home div img {
     width: 80%;
     mix-blend-mode: multiply;
-    /* filter: drop-shadow( 0px 0px 10px); */
-    /* border: solid 2px ; */
     border-radius: 50%;
 }
 
 .parrafo-home div h1 {
     font-size: 3rem;
+    color: goldenrod;
 }
+
 .home div p {
-    color:black;
+    color:whitesmoke;
     font-weight: bolder;
 }
 
@@ -366,8 +369,10 @@ section div .img {
   
   header nav img {
     width: 45px;
-    mix-blend-mode: multiply;
+    /* mix-blend-mode: multiply; */
+    border-radius: 50%;
     display: initial;
+    padding: 5px;
 }
 
   header nav i {
@@ -394,7 +399,7 @@ section div .img {
     box-shadow: 0px 0px 50px 80px;
   }
 
-  section h1 {
+  section h2 {
     font-size: 2rem;
   }
 
@@ -402,9 +407,9 @@ section div .img {
     font-size: 1.6rem;
   }
 
-  .home {
-    align-items: center;
-  }
+  .parrafo-home div h1 {
+    font-size: 4rem;
+}
 
   .parrafo {
     order: 2;
