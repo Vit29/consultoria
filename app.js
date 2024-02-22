@@ -42,7 +42,6 @@ header.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
     const section = Math.round(scrollY / sizeHeight)
-    console.log(section);
     
     if (section == 1 ) secQuienesSomos.classList.add('show')
     if (section == 2 ) tienesUnProblema.classList.add('show')

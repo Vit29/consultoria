@@ -19,6 +19,9 @@ body::-webkit-scrollbar-thumb {
 
 body {
   background-color: #0c0e1f;
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
 }
 
 header {
@@ -158,18 +161,17 @@ section p {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  transform: translateX(-100%);
+  transform: translateY(30%);
   opacity: 0;
   transition: 2s ease;
 }
 
 .show {
-  transform: translateX(0);
+  transform: translateY(0);
   opacity: 1;
 }
 
 .img {
-  background-image: url(fotos-loba/5.jpg);
   min-width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -177,6 +179,18 @@ section p {
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 20px;
+}
+
+.quines-somos-img {
+  background-image: url(fotos-loba/presntacion.jpg);
+}
+
+.tienes-un-problema-img {
+    background-image: url(fotos-loba/5.jpg);
+}
+
+.como-y-a-quienes-img {
+    background-image: url(fotos-loba/stairs.jpg);
 }
 
 .propuesta-solutiva {
@@ -218,19 +232,6 @@ section p {
   position: relative;
 }
 
-/* .carrucel div::after {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 100px;
-  width: 0px;
-  z-index: -10;
-  border-right: solid 10px transparent;
-  border-bottom: solid 10px transparent;
-  border-top: solid 10px transparent;
-  border-left: solid 10px #ffffff;
-} */
-
 .number {
   width: 50px;
   height: 50px;
@@ -258,9 +259,7 @@ section p {
 
 .contacto,
 .motivacion {
-  display: inline-block;
-  width: auto;
-  margin: auto;
+  flex-direction: column;
 }
 
 .contacto p {
@@ -349,4 +348,22 @@ section p {
   .propuesta-solutiva::after {
     box-shadow: 0px 0px 50px 80px;
   }
+
+  section h1 {
+    font-size: 2rem;
+  }
+  
+  section p {
+    font-size: 1.6rem;
+   
+  }
+
+  .parrafo {
+    order: 2;
+  }
+
+  .como-y-a-quienes-img {
+    order: 1;
+ }
+
 }
