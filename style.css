@@ -9,7 +9,7 @@
 
 body::-webkit-scrollbar {
   width: 8px;
-  background-color: rgb(12, 14, 31);
+  background-color: #0c0e1f;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -29,7 +29,7 @@ header {
   width: 100%;
   height: 100vh;
   top: 0;
-  background-color: rgba(14, 24, 78, 0.842);
+  background-color: rgba(14, 24, 78, 0.945);
   clip-path: circle(50px at 100% 0%);
   transition: 0.5s ease;
   cursor: pointer;
@@ -40,20 +40,20 @@ header.active {
 }
 
 header nav {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 header nav i {
- position: absolute;
- color: white;
- font-size: 2rem; 
- right: 0;
- top: 0;
- padding: 0.2rem;
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  right: 0;
+  top: 0;
+  padding: 0.2rem;
 }
 
 header nav ul {
@@ -127,7 +127,6 @@ section p {
   align-items: center;
 }
 
-
 #propuesta-solutiva {
   position: relative;
 }
@@ -135,17 +134,53 @@ section p {
 .home {
   width: 100%;
   height: 100%;
-  background-image: url(fotos-loba/2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-weight: bolder;
 }
 
-.home img {
+.home::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    background: url(fotos-loba/2.jpg) center/cover;
+    background-repeat: no-repeat;
+    filter: blur(5px) brightness(70%);
+    z-index: -1;
+}
+
+.parrafo-home div img {
     width: 50%;
-    border-radius: 50% ;
-    filter: invert();
     mix-blend-mode: multiply;
+    /* filter: drop-shadow( 0px 0px 10px); */
+    border: solid 2px ;
+    border-radius: 50%;
+}
+
+.parrafo-home div h1 {
+    font-size: 3rem;
+}
+.home div p {
+    color:black;
+    font-weight: bolder;
+}
+
+.home div button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00ff37;
+}
+
+.home div button a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
 }
 
 .quines-somos,
@@ -171,7 +206,7 @@ section p {
   opacity: 1;
 }
 
-.img {
+section div .img {
   min-width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -186,11 +221,11 @@ section p {
 }
 
 .tienes-un-problema-img {
-    background-image: url(fotos-loba/5.jpg);
+  background-image: url(fotos-loba/5.jpg);
 }
 
 .como-y-a-quienes-img {
-    background-image: url(fotos-loba/stairs.jpg);
+  background-image: url(fotos-loba/stairs.jpg);
 }
 
 .propuesta-solutiva {
@@ -273,31 +308,31 @@ section p {
 }
 
 .contacto p i {
-    padding: 0 10px;
-    font-size: 1rem;
+  padding: 0 10px;
+  font-size: 1rem;
 }
 
 .redes {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .redes i {
-    padding: 0 8px;
-    color: whitesmoke;
-    font-size: 1.5rem;
+  padding: 0 8px;
+  color: whitesmoke;
+  font-size: 1.5rem;
 }
 
 .bi-facebook:hover {
-    color: rgb(92, 74, 255);
+  color: #5c4aff;
 }
 .bi-whatsapp:hover {
-    color: rgb(118, 252, 106);
+  color: #76fc6a;
 }
 .bi-envelope-at-fill:hover {
-    color: #fff348;
+  color: #fff348;
 }
 .bi-geo-alt-fill:hover {
-    color: rgb(252, 64, 64);
+  color: #fc4040;
 }
 
 .part-one {
@@ -314,10 +349,15 @@ section p {
   color: whitesmoke;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 640px) {
+  /* .quines-somos,
+  .tienes-un-problema,
+  .como-y-a-quienes,
+  .motivacion,
+  .contacto,
   .propuesta-solutiva {
-    width: 100%;
-  }
+    
+  } */
 
   header {
     position: absolute;
@@ -352,10 +392,9 @@ section p {
   section h1 {
     font-size: 2rem;
   }
-  
+
   section p {
     font-size: 1.6rem;
-   
   }
 
   .parrafo {
@@ -364,6 +403,5 @@ section p {
 
   .como-y-a-quienes-img {
     order: 1;
- }
-
+  }
 }
