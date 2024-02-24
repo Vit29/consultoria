@@ -4,7 +4,7 @@ const tienesUnProblema = document.querySelector('.tienes-un-problema')
 const propuestaSolutiva = document.querySelector('.propuesta-solutiva')
 const comoQuienes = document.querySelector('.como-y-a-quienes')
 const comentario = document.querySelector('.comentario')
-const motivacion = document.querySelector('.motivacion')
+// const motivacion = document.querySelector('.motivacion')
 const contacto = document.querySelector('.contacto')
 const fondoNuevos = document.querySelectorAll('.fondo')
 
@@ -19,7 +19,7 @@ fondoNuevos.forEach(fondoNuevo => {
         const alto = Math.floor(Math.random() * (300 - 50 + 1))  + 50 
         const ancho = Math.floor(Math.random() * (300 - 50 + 1)) + 50
         const x = Math.random() * sizeWidth 
-        const y = Math.random() * -sizeHeight * 7
+        const y = Math.random() * -sizeHeight * 6
     
         cuadro.style.border = 'solid 1px Gold'
         cuadro.style.opacity = '0.2'
@@ -48,7 +48,7 @@ window.addEventListener('scroll', () => {
     if (section == 3 ) propuestaSolutiva.classList.add('show')
     if (section == 4 ) comoQuienes.classList.add('show')
     if (section == 5 ) comentario.classList.add('show')
-    if (section == 6 ) motivacion.classList.add('show')
-    if (section == 7 ) contacto.classList.add('show')
+    // if (section == 6 ) motivacion.classList.add('show')
+    if (section == 6 ) contacto.classList.add('show')
     
 })

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap");
 
 * {
   margin: 0;
@@ -50,7 +50,7 @@ header nav {
 }
 
 header nav img {
-    display: none;
+  display: none;
 }
 
 header nav i {
@@ -114,26 +114,26 @@ section h2 {
 
 section p {
   max-width: 650px;
-  font-size: clamp(1rem, 6vw, 2rem) ;
+  font-size: clamp(1rem, 6vw, 2rem);
   color: white;
   padding: 1rem 0;
 }
 
 section div .img {
-    width: 90%;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 20px;
-  }
+  width: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 20px;
+}
 
 #quines-somos,
 #tienes-un-problema,
 #como-y-a-quienes,
 #comentario,
-#motivacion,
+/* #motivacion, */
 #contacto,
 #propuesta-solutiva {
   display: flex;
@@ -153,40 +153,40 @@ section div .img {
   align-items: center;
   position: relative;
   font-weight: bolder;
-  font-family: 'Montserrat' , sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 
 .home::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url(fotos-loba/2.jpg) center/cover;
-    background-repeat: no-repeat;
-    filter: blur(5px) brightness(50%) ;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(fotos-loba/2.jpg) center/cover;
+  background-repeat: no-repeat;
+  filter: blur(5px) brightness(50%);
+  z-index: -1;
 }
 
 .parrafo-home {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .parrafo-home div img {
-    width: 80%;
-    mix-blend-mode: screen;
-    border-radius: 50%;
-    filter: drop-shadow(0 0 10px #f5f3f3);    
+  width: 80%;
+  mix-blend-mode: screen;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #f5f3f3);
 }
 
 .parrafo-home div h1 {
-    font-size: 3rem;
-    color: goldenrod;
+  font-size: 3rem;
+  color: goldenrod;
 }
 
 .parrafo-home p {
-    font-weight: bolder;
-    padding: 1rem 0;
+  font-weight: bolder;
+  padding: 1rem 0;
 }
 
 .parrafo-home button {
@@ -205,11 +205,11 @@ section div .img {
 
 .quines-somos,
 .tienes-un-problema,
+.propuesta-solutiva, 
 .como-y-a-quienes,
 .comentario,
-.motivacion,
-.contacto,
-.propuesta-solutiva {
+/* .motivacion, */
+.contacto {
   width: 100%;
   padding: 15px;
   display: flex;
@@ -225,7 +225,6 @@ section div .img {
   transform: translateY(0);
   opacity: 1;
 }
-
 
 .quines-somos-img {
   background-image: url(fotos-loba/presntacion.jpg);
@@ -247,6 +246,7 @@ section div .img {
 
 .carrucel {
   display: flex;
+  /* flex-direction: column; */
   width: calc(350px * 8);
   animation: carrucel 40s linear infinite;
 }
@@ -278,6 +278,10 @@ section div .img {
   position: relative;
 }
 
+.carrucel div p {
+    padding: 0 10px;
+}
+
 .number {
   width: 50px;
   height: 50px;
@@ -303,6 +307,7 @@ section div .img {
   font-style: italic;
 }
 
+.comentario,
 .contacto,
 .motivacion {
   flex-direction: column;
@@ -361,27 +366,24 @@ section div .img {
 }
 
 @media screen and (min-width: 600px) {
-
-header {
+  header {
     clip-path: circle(75px at 100% 0%);
-    }
-    
-    header.active {
+  }
+
+  header.active {
     clip-path: circle(145% at 100% 0);
-    }
+  }
 
-    section div .img {
-        width: 70%;
-    }
+  section div .img {
+    width: 70%;
+  }
 
-    header nav i {
-        font-size: 3rem;
-    }
-
+  header nav i {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
- 
   header {
     position: absolute;
     height: auto;
@@ -392,14 +394,14 @@ header {
     flex-direction: row;
     justify-content: space-between;
   }
-  
+
   header nav img {
     width: 45px;
     mix-blend-mode: multiply;
     border-radius: 50%;
     display: initial;
     padding: 5px;
-}
+  }
 
   header nav i {
     display: none;
@@ -435,7 +437,7 @@ header {
 
   .parrafo-home div h1 {
     font-size: 4rem;
-}
+  }
 
   .parrafo {
     order: 2;
@@ -452,5 +454,6 @@ header {
   section div .img {
     max-width: 30%;
   }
-}
 
+   
+}
