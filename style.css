@@ -22,6 +22,7 @@ body {
   max-width: 1500px;
   margin: 0 auto;
   position: relative;
+  font-size: 16px;
 }
 
 header {
@@ -29,7 +30,7 @@ header {
   width: 100%;
   height: 100vh;
   top: 0;
-  background-color: rgba(14, 24, 78, 0.945);
+  background-color: #0e184ef1;
   clip-path: circle(50px at 100% 0%);
   transition: 0.5s ease;
   cursor: pointer;
@@ -108,15 +109,25 @@ section h2 {
   text-transform: uppercase;
   font-weight: 100;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: clamp(1rem, 8vw, 3rem);
 }
 
 section p {
-  max-width: 550px;
-  font-size: 1.3rem;
-  padding: 1rem;
+  max-width: 650px;
+  font-size: clamp(1rem, 6vw, 2rem) ;
   color: white;
+  padding: 1rem 0;
 }
+
+section div .img {
+    width: 90%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 20px;
+  }
 
 #quines-somos,
 #tienes-un-problema,
@@ -157,12 +168,14 @@ section p {
     z-index: -1;
 }
 
+.parrafo-home {
+    padding: 1rem;
+}
+
 .parrafo-home div img {
     width: 80%;
     mix-blend-mode: screen;
     border-radius: 50%;
-    padding-top: 20px;
-    /* filter: opacity(80%); */
     filter: drop-shadow(0 0 10px #f5f3f3);    
 }
 
@@ -171,20 +184,20 @@ section p {
     color: goldenrod;
 }
 
-.home div p {
-    color:whitesmoke;
+.parrafo-home p {
     font-weight: bolder;
+    padding: 1rem 0;
 }
 
-.home div button {
+.parrafo-home button {
   width: 150px;
-  height: 40px;
+  height: 45px;
   border: none;
   border-radius: 5px;
   background-color: #00ff37;
 }
 
-.home div button a {
+.parrafo-home button a {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
@@ -213,15 +226,6 @@ section p {
   opacity: 1;
 }
 
-section div .img {
-  min-width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 20px;
-}
 
 .quines-somos-img {
   background-image: url(fotos-loba/presntacion.jpg);
@@ -316,7 +320,7 @@ section div .img {
 
 .contacto p i {
   padding: 0 10px;
-  font-size: 1rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .redes {
@@ -326,11 +330,11 @@ section div .img {
 .redes i {
   padding: 0 8px;
   color: whitesmoke;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 
 .bi-facebook:hover {
-  color: #5c4aff;
+  color: #3e2af7;
 }
 .bi-whatsapp:hover {
   color: #76fc6a;
@@ -356,7 +360,27 @@ section div .img {
   color: whitesmoke;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 600px) {
+
+header {
+    clip-path: circle(75px at 100% 0%);
+    }
+    
+    header.active {
+    clip-path: circle(145% at 100% 0);
+    }
+
+    section div .img {
+        width: 70%;
+    }
+
+    header nav i {
+        font-size: 3rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
  
   header {
     position: absolute;
@@ -372,7 +396,7 @@ section div .img {
   header nav img {
     width: 45px;
     mix-blend-mode: multiply;
-    filter: invert() ;
+    border-radius: 50%;
     display: initial;
     padding: 5px;
 }
@@ -424,4 +448,9 @@ section div .img {
   .parrafo-home div img {
     width: 60%;
   }
+
+  section div .img {
+    max-width: 30%;
+  }
 }
+
