@@ -4,7 +4,6 @@ const tienesUnProblema = document.querySelector('.tienes-un-problema')
 const propuestaSolutiva = document.querySelector('.propuesta-solutiva')
 const comoQuienes = document.querySelector('.como-y-a-quienes')
 const comentario = document.querySelector('.comentario')
-// const motivacion = document.querySelector('.motivacion')
 const contacto = document.querySelector('.contacto')
 const fondoNuevos = document.querySelectorAll('.fondo')
 
@@ -42,13 +41,12 @@ header.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
     const section = Math.round(scrollY / sizeHeight)
-    
+    console.log(section);
     if (section == 1 ) secQuienesSomos.classList.add('show')
     if (section == 2 ) tienesUnProblema.classList.add('show')
     if (section == 3 ) propuestaSolutiva.classList.add('show')
     if (section == 4 ) comoQuienes.classList.add('show')
     if (section == 5 ) comentario.classList.add('show')
-    // if (section == 6 ) motivacion.classList.add('show')
     if (section == 6 ) contacto.classList.add('show')
     
 })

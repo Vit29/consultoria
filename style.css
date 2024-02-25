@@ -30,7 +30,7 @@ header {
   width: 100%;
   height: 100vh;
   top: 0;
-  background-color: #0e184ef1;
+  background-color: #0e184e;
   clip-path: circle(50px at 100% 0%);
   transition: 0.5s ease;
   cursor: pointer;
@@ -82,7 +82,7 @@ header nav ul li a {
   justify-content: center;
   padding: 15px 10px;
   text-transform: uppercase;
-  border: 1px solid goldenrod;
+  border: 1px solid whitesmoke;
   width: 100%;
   text-decoration: none;
   color: whitesmoke;
@@ -133,7 +133,6 @@ section div .img {
 #tienes-un-problema,
 #como-y-a-quienes,
 #comentario,
-/* #motivacion, */
 #contacto,
 #propuesta-solutiva {
   display: flex;
@@ -208,7 +207,6 @@ section div .img {
 .propuesta-solutiva, 
 .como-y-a-quienes,
 .comentario,
-/* .motivacion, */
 .contacto {
   width: 100%;
   padding: 15px;
@@ -246,7 +244,6 @@ section div .img {
 
 .carrucel {
   display: flex;
-  /* flex-direction: column; */
   width: calc(350px * 8);
   animation: carrucel 40s linear infinite;
 }
