@@ -271,7 +271,7 @@ section div .img {
 .carrucel div {
   width: 350px;
   padding-top: 5rem;
-  transform: translate(700px);
+  /* transform: translate(300px); */
   position: relative;
 }
 
@@ -377,6 +377,10 @@ section div .img {
 
   header nav i {
     font-size: 3rem;
+  }
+
+  .carrucel div {
+    /* transform: translate(300px); */
   }
 }
 
